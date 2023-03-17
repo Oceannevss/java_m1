@@ -2,5 +2,5 @@ package exercices.mytube;
 
 public interface Notif {
 
-    void sendEmail(User user);
+    void sendNotification(User user);
 }

@@ -8,7 +8,12 @@ public class Main {
         video.setTitle("Jennifer's birthday");
         video.setUser(new User("john@domain.com"));
 
-        var processor = new VideoProcessor();
+        //utilise les classe qui on implementé les interfaces
+        var enco = new VideoEncoder();
+        var data = new VideoDatabase();
+        var not = new EmailService();
+
+        var processor = new VideoProcessor(enco, data, not);
         processor.process(video);
     }
 }
