@@ -25,6 +25,8 @@ public class CarRental {
     public void remove(Transport transport){
         if(this.listCar.contains(transport)){
             this.listCar.remove(transport);
+        }else{
+            throw new IllegalStateException();
         }
     }
     public List<Transport> toSell(){
@@ -52,8 +54,8 @@ public class CarRental {
     public String toString() {
         String display = "";
         for (Transport trans: listCar) {
-            display += trans.toString() + "\n";
+            display += trans.toString() + "\n" ;
         }
-        return display ;
+        return display.trim() ;
     }
 }

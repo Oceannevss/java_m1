@@ -23,4 +23,5 @@ public class Transport {
     public void setDateVente(int dateVente) {
         this.dateVente = dateVente;
     }
+
 }
